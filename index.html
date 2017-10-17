@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="myScript.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"></script>	
-	<link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css' rel='stylesheet' type='text/css'>
+	<link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Test site</title>
+	<title>Coming Soon</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style type="text/css">body{
-  background-image: url("https://www.planwallpaper.com/static/images/518079-background-hd.jpg")	;
+	<style type="text/css">body{	
+  background-image: url("http://www.planwallpaper.com/static/images/518079-background-hd.jpg")	;
   padding: 100px;
-   
 }
 .container{
-  opacity: 0.6;
+  opacity: 0.4;
   background-color: LightGrey;
   position: absolute;
+  
   width: 45%;
-  top: 45%;
+  top: 25%;
   left: 25%;
   border-radius: 15px;
   padding: 30px;
 }
 #content{
-  opacity: 0.6;
-  position: absolute;
-  display:block;
-  overflow:auto;
-  width: 75%;
-  top: 20%;
-  left: 10%;
-  border-radius: 15px;
-  padding: 30px;
+  position: relative;
+  height: 80%;
+  inline: block;
 }
 .textFrame{
   height: 70%;
@@ -49,78 +39,53 @@
   text-align: right;
   font-family: monospace;
   font-size: 145%;
-  padding: 0px;
+  padding: 10px;
 }
-.wikiSearch{
+#author{
+
+}
+.getQuote{
   position: relative;
   height: 15%; 
 }
-#random {
-  background-color: WhiteSmoke;
-  position: relative;
-  float: left;
-  border-radius: 9px;
-  height: 30px;
-  width: 20%;
-  padding: 3px; 
-}
-#search {
+#quoteButton {
   background-color: WhiteSmoke;
   position: relative;
   float: right;
   border-radius: 9px;
-  height: 30px;
+  height: 30px;;
   width: 20%;
   padding: 3px;
 }
-input[type=text] {
-    border-radius: 9px;
-    height: 25px;
-    width:57%;
-    padding: 3px;
-    margin-left:5px;
-    position: relative;
-    left: 0;
-    outline: none;
-    border: 1px solid #cdcdcd;
-    border-color: rgba(0,0,0,.15);
-    background-color: white;
-    font-size: 16px;
-    position: relative;
- 
-}
-#advancedSearchTextbox {
-    width: 526px;
-    margin-right: -4px;   
-}
-#ui-id-1{
-  opacity: 0.6;
-}
-
-.search_list{
-  background-color: #efefef;
-  border-width:3px;
-  font-size: 16px;
-  font-family: college;
-  color: black;
-  border-radius: 9px;
-  height: auto;
-  padding: 10px;
-  margin: 10px;
-}
+.fa.fa-twitter-square{
+  margin-left: 10px;
 }
 
 </style>
 </head>
 <body>
 <div class="container">
-   <div class="wikiSearch">
-     <a href="http://en.wikipedia.org/wiki/Special:Randompage"> <button type="button" id="random"> Random article </button> </a>
-     <input type="text" id="advancedSearchTextBox"/>
-      <button type="button" id="search"> Wikipedia search </button>
+  <div id="content">
+    <div class="textFrame">
+      <span id="text"></span>
     </div>
+    <div class="authorFrame">
+      <span id="author"></span>
+    </div>
+  </div>
+   <div class="getQuote">
+     <a class="tweet_button" target="_blank"  href="https://twitter.com/share?
+ url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&
+  via=twitterdev&
+  related=twitterapi%2Ctwitter&
+  hashtags=example%2Cdemo&
+  text=custom%20share%20text">
+<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+</a>
+      <button type="button" id="quoteButton">Get a quote</button>
+    </div>
+  
 </div>
-<div id="content"></div>
 </body>
 </html>
 </head>
