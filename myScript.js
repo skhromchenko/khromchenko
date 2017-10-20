@@ -3,13 +3,6 @@ $(document).ready(function(){
 
     var firmacount = 0;
     $(document).ready(function(){
-          
-        $(function(){
-          // get hash value
-          var hash = window.location.hash;
-          // now scroll to element with that id
-          $('html, body').animate({ scrollTop: $(hash).offset().top });
-        });
         
         var altura = $(".body").height();
         var ancho = $(".body").width();
@@ -17,11 +10,6 @@ $(document).ready(function(){
         $(".start").css("height",altura+"px");
         $(".start").css("width",ancho+"px");
         $("#first").css("margin-top",altura+"px");
-
-        $("#hire").on("click", function(){
-            $(this).toggleClass("hireClick");
-            $('.info').toggleClass("displaySee");
-        });
 
         $('.toggle').toggles({
           drag: true, // allow dragging the toggle between positions
